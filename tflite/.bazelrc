@@ -4,6 +4,9 @@ common --experimental_repo_remote_exec
 # Unused function in Tensorflow Lite kernels
 common --copt="-Wno-error=unused-function"
 
+# Unused variables in Tensorflow Lite XNNPACK delegate
+common --copt="-Wno-error=unused-but-set-variable"
+
 # Mediapipe custom operators are not public
 common --check_visibility=false
 
